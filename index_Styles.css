@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url('https://images.pexels.com/photos/810036/pexels-photo-810036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');*/
+    transition: 0.5s;
+}
+
+/*#b3b3b3 Gray
+#ff8080 red 
+#80ffaa green
+#99c2ff blue
+#ffc266 orange
+#cc99ff violet*/
+
+.container{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    background-color: antiquewhite;
+}
+#LeftDisplay{
+    padding: 15px;
+    position: relative;
+    left: 12%;
+    font-size: 30px;
+}
+#LeftDisplay span{
+    text-transform: uppercase;
+    font-family: 'Bungee', cursive;
+    font-weight: 400;
+    transition: 0.5s;
+}
+#rightDisplay{
+    padding: 15px;
+    position: relative;
+    left: -12%;
+    font-size: 30px;
+}
+#rightDisplay span{
+    text-transform: uppercase;
+    font-family: 'Notable', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+#topDisplay{
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    font-size: 40px;
+}
+#topDisplay  span{
+    text-transform: uppercase;
+    font-family: 'Tangerine', cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+#bottomDisplay{
+    padding: 15px;
+    position: absolute;
+    top: 80%;
+    font-size: 40px;
+}
+#bottomDisplay  span{
+    text-transform: uppercase;
+    font-family: 'Monoton', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container h2{
+    color: darkgray;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px ;
+}
+
+.container form{
+    height: 60%;
+    width: 60%;
+    padding: 10px;
+}
+.container  form .form-group{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.container form .form-group input[type="text"]{
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    padding-left: 8px;
+    transition: all 0.5s;
+    font-size: 18px;
+    color: #555;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: antiquewhite;
+}
+
+.container form .form-group span{
+    position: relative;
+    top: -32px;
+    left: 8px;
+    width: 100%;
+    background-color: antiquewhite; 
+    transition: 0.5s;
+}
+
+.container form .form-group input[type="text"]:focus~span,
+.container form .form-group input[type="text"]:valid~span{
+    top: -52px;
+    color: dodgerblue;
+}
+
+.container form .form-group input[type="text"]:focus,
+.container form .form-group input[type="text"]:valid{
+    border: 1px solid dodgerblue;
+}
+
+.container form .form-group input:-webkit-autofill{
+    -webkit-background-color: #fff;
+    background-color: #fff;
+    -webkit-text-fill-color: #777;
+    transition: background-color 5000s ease-in-out;
+}
+
+.container #res{
+    color: coral;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+@media(max-width:768px){
+    #rightDisplay,#LeftDisplay{
+        display: none;
+    }
+    form{
+        width: 100%;
+    }
+}
+
+@media(max-height:600px){
+    #topDisplay{
+        position: absolute;
+        top:3%
+    }
+    #bottomDisplay{
+        position: absolute;
+        top: 85%;
+    }
+}
